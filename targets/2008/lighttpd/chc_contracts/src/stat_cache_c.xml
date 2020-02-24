@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:08.034988"/>
+  <cfile name="src/stat_cache">
+    <data-structures/>
+    <functions>
+      <function name="hashme">
+        <parameters>
+          <par name="str" nr="1"/>
+        </parameters>
+      </function>
+      <function name="stat_cache_entry_free">
+        <parameters>
+          <par name="data" nr="1"/>
+        </parameters>
+      </function>
+      <function name="stat_cache_entry_init">
+        <parameters/>
+      </function>
+      <function name="stat_cache_free">
+        <parameters>
+          <par name="sc" nr="1"/>
+        </parameters>
+      </function>
+      <function name="stat_cache_get_entry">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="name" nr="3"/>
+          <par name="ret_sce" nr="4"/>
+        </parameters>
+      </function>
+      <function name="stat_cache_init">
+        <parameters/>
+      </function>
+      <function name="stat_cache_lstat">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="dname" nr="2"/>
+          <par name="lst" nr="3"/>
+        </parameters>
+      </function>
+      <function name="stat_cache_tag_old_entries">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="t" nr="2"/>
+          <par name="keys" nr="3"/>
+          <par name="ndx" nr="4"/>
+        </parameters>
+      </function>
+      <function name="stat_cache_trigger_cleanup">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

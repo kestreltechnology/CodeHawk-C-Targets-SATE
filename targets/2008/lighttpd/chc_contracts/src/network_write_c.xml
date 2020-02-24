@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:03.356025"/>
+  <cfile name="src/network_write">
+    <data-structures/>
+    <functions>
+      <function name="network_write_chunkqueue_write">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="fd" nr="3"/>
+          <par name="cq" nr="4"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:07.306199"/>
+  <cfile name="src/server">
+    <data-structures/>
+    <functions>
+      <function name="daemonize">
+        <parameters/>
+      </function>
+      <function name="main">
+        <parameters>
+          <par name="argc" nr="1"/>
+          <par name="argv" nr="2"/>
+        </parameters>
+      </function>
+      <function name="server_free">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="server_init">
+        <parameters/>
+      </function>
+      <function name="show_features">
+        <parameters/>
+      </function>
+      <function name="show_help">
+        <parameters/>
+      </function>
+      <function name="show_version">
+        <parameters/>
+      </function>
+      <function name="sigaction_handler">
+        <parameters>
+          <par name="sig" nr="1"/>
+          <par name="si" nr="2"/>
+          <par name="context" nr="3"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

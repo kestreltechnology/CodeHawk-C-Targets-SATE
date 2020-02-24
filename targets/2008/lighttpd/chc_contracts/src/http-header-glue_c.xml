@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:27.164128"/>
+  <cfile name="src/http-header-glue">
+    <data-structures/>
+    <functions>
+      <function name="get_sa_len">
+        <parameters>
+          <par name="addr" nr="1"/>
+        </parameters>
+      </function>
+      <function name="http_response_handle_cachable">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="mtime" nr="3"/>
+        </parameters>
+      </function>
+      <function name="http_response_redirect_to_directory">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="response_header_insert">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="key" nr="3"/>
+          <par name="keylen" nr="4"/>
+          <par name="value" nr="5"/>
+          <par name="vallen" nr="6"/>
+        </parameters>
+      </function>
+      <function name="response_header_overwrite">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="key" nr="3"/>
+          <par name="keylen" nr="4"/>
+          <par name="value" nr="5"/>
+          <par name="vallen" nr="6"/>
+        </parameters>
+      </function>
+      <function name="strftime_cache_get">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="last_mod" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

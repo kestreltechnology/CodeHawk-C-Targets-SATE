@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:18.374205"/>
+  <cfile name="src/array">
+    <data-structures/>
+    <functions>
+      <function name="array_free">
+        <parameters>
+          <par name="a" nr="1"/>
+        </parameters>
+      </function>
+      <function name="array_get_element">
+        <parameters>
+          <par name="a" nr="1"/>
+          <par name="key" nr="2"/>
+        </parameters>
+      </function>
+      <function name="array_get_index">
+        <parameters>
+          <par name="a" nr="1"/>
+          <par name="key" nr="2"/>
+          <par name="keylen" nr="3"/>
+          <par name="rndx" nr="4"/>
+        </parameters>
+      </function>
+      <function name="array_get_max_key_length">
+        <parameters>
+          <par name="a" nr="1"/>
+        </parameters>
+      </function>
+      <function name="array_get_unused_element">
+        <parameters>
+          <par name="a" nr="1"/>
+          <par name="t" nr="2"/>
+        </parameters>
+      </function>
+      <function name="array_init">
+        <parameters/>
+      </function>
+      <function name="array_init_array">
+        <parameters>
+          <par name="src" nr="1"/>
+        </parameters>
+      </function>
+      <function name="array_insert_unique">
+        <parameters>
+          <par name="a" nr="1"/>
+          <par name="str" nr="2"/>
+        </parameters>
+      </function>
+      <function name="array_pop">
+        <parameters>
+          <par name="a" nr="1"/>
+        </parameters>
+      </function>
+      <function name="array_print">
+        <parameters>
+          <par name="a" nr="1"/>
+          <par name="depth" nr="2"/>
+        </parameters>
+      </function>
+      <function name="array_print_indent">
+        <parameters>
+          <par name="depth" nr="1"/>
+        </parameters>
+      </function>
+      <function name="array_replace">
+        <parameters>
+          <par name="a" nr="1"/>
+          <par name="du" nr="2"/>
+        </parameters>
+      </function>
+      <function name="array_reset">
+        <parameters>
+          <par name="a" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

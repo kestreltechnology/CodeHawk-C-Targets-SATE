@@ -1,0 +1,213 @@
+File line and function counts
+
+file                                    LOC        CLOC   functions
+-------------------------------------------------------------------
+src/array                               318         228          13
+src/bitset                               66          43           6
+src/buffer                             1072         629          44
+src/chunk                               401         276          22
+src/configfile                         1248         713          14
+src/configfile-glue                     526         293           9
+src/configparser                       1588         412          18
+src/connections                        1769         806          14
+src/connections-glue                     42          58           3
+src/crc32                                80          11           1
+src/data_array                           64          49           6
+src/data_config                         137         106           6
+src/data_count                           67          52           6
+src/data_fastcgi                         68          50           6
+src/data_integer                         64          47           6
+src/data_string                         103          77           8
+src/etag                                 45          34           3
+src/fdevent                             200         171          16
+src/fdevent_freebsd_kqueue              205           4           1
+src/fdevent_linux_rtsig                 250         155           9
+src/fdevent_linux_sysepoll              148          99           8
+src/fdevent_poll                        168         118           8
+src/fdevent_select                      122          92           8
+src/fdevent_solaris_devpoll             156           4           1
+src/http-header-glue                    349         170           6
+src/http_auth                          1184         585           9
+src/http_auth_digest                     18           9           1
+src/http_chunk                          131          80           5
+src/inet_ntop_cache                      48          20           1
+src/joblist                              63          43           5
+src/keyvalue                            388         196          20
+src/lemon                              4395        3147         102
+src/lighttpd-angel                      152          84           2
+src/log                                 250         141           4
+src/md5                                 339         286           7
+src/mod_access                          189         114           6
+src/mod_accesslog                       876         512           8
+src/mod_alias                           202         131           6
+src/mod_auth                            613         317           7
+src/mod_cgi                            1349         744          19
+src/mod_cml                             321         181           8
+src/mod_cml_funcs                         0           0           0
+src/mod_cml_lua                         466           6           1
+src/mod_compress                        707         402          10
+src/mod_dirlisting                      908         529          15
+src/mod_evasive                         177         100           6
+src/mod_evhost                          331         202           8
+src/mod_expire                          368         217           7
+src/mod_extforward                      476         244          14
+src/mod_fastcgi                        3849        2124          43
+src/mod_flv_streaming                   277         172           7
+src/mod_indexfile                       218         126           6
+src/mod_magnet                          849           3           1
+src/mod_magnet_cache                      0           0           0
+src/mod_mysql_vhost                     436           5           1
+src/mod_proxy                          1324         762          21
+src/mod_redirect                        282         161           6
+src/mod_rewrite                         457         269          13
+src/mod_rrdtool                         448         278           9
+src/mod_scgi                           3084        1568          39
+src/mod_secure_download                 304         172           7
+src/mod_setenv                          246         154           9
+src/mod_simple_vhost                    280         171           7
+src/mod_ssi                            1091         592          11
+src/mod_ssi_expr                        323         203           5
+src/mod_ssi_exprparser                  949         318          14
+src/mod_staticfile                      528         297           7
+src/mod_status                          854         524          17
+src/mod_trigger_b4_dl                   585         176           6
+src/mod_userdir                         293         173           6
+src/mod_usertrack                       269         154           6
+src/mod_webdav                         2475         939          18
+src/network                             671         299           6
+src/network_freebsd_sendfile              0           0           0
+src/network_linux_sendfile              246         110           1
+src/network_openssl                       0           0           0
+src/network_solaris_sendfilev             0           0           0
+src/network_write                       161          71           1
+src/network_writev                      341         141           1
+src/plugin                              451         631          20
+src/proc_open                           390         201          13
+src/request                            1170         668           5
+src/response                            654         278           2
+src/server                             1487         652           8
+src/spawn-fcgi                          434         256           4
+src/splaytree                           205         115           4
+src/stat_cache                          746         177           9
+src/status_counter                       58          35           4
+src/stream                              105          22           2
+-------------------------------------------------------------------
+total                                 49747       25984         852
+
+Distribution of lvalue hosts
+file                                    mem         var         tmp
+-------------------------------------------------------------------
+src/array                                61         133           8
+src/bitset                               12          31           1
+src/buffer                              102         293          28
+src/chunk                                77         158           2
+src/configfile                          128         276          72
+src/configfile-glue                      81         166          23
+src/configparser                        140         286          19
+src/connections                         170         331          70
+src/connections-glue                      1           5           0
+src/crc32                                 1           6           0
+src/data_array                           21          52           0
+src/data_config                          45          89           0
+src/data_count                           20          50           0
+src/data_fastcgi                         22          49           0
+src/data_integer                         17          44           0
+src/data_string                          36          76           0
+src/etag                                  6          22           1
+src/fdevent                              36          99           8
+src/fdevent_freebsd_kqueue                1           3           0
+src/fdevent_linux_rtsig                  33          95          10
+src/fdevent_linux_sysepoll               15          61          11
+src/fdevent_poll                         21          60           4
+src/fdevent_select                       11          45           0
+src/fdevent_solaris_devpoll               1           3           0
+src/http-header-glue                     37         115          16
+src/http_auth                            73         253          76
+src/http_auth_digest                      4           8           0
+src/http_chunk                           26          61           1
+src/inet_ntop_cache                       3          11           1
+src/joblist                              14          28           4
+src/keyvalue                             48         127          15
+src/lemon                               479        1152         125
+src/lighttpd-angel                        6          37           2
+src/log                                  15          61          13
+src/md5                                  21          63           0
+src/mod_access                           39          89           4
+src/mod_accesslog                        99         200          40
+src/mod_alias                            54         114           6
+src/mod_auth                             90         177          39
+src/mod_cgi                             209         443         125
+src/mod_cml                              63         128          10
+src/mod_cml_funcs                         0           0           0
+src/mod_cml_lua                           0           0           0
+src/mod_compress                         98         237          43
+src/mod_dirlisting                      128         291          38
+src/mod_evasive                          37          82           3
+src/mod_evhost                           72         153           9
+src/mod_expire                           56         134          26
+src/mod_extforward                       70         179          10
+src/mod_fastcgi                         487         970         235
+src/mod_flv_streaming                    59         136           9
+src/mod_indexfile                        53         107           9
+src/mod_magnet                            0           0           0
+src/mod_magnet_cache                      0           0           0
+src/mod_mysql_vhost                       1           3           0
+src/mod_proxy                           224         466          52
+src/mod_redirect                         61         135           5
+src/mod_rewrite                          84         188          11
+src/mod_rrdtool                          81         172          32
+src/mod_scgi                            417         837         162
+src/mod_secure_download                  53         119          13
+src/mod_setenv                           68         131           8
+src/mod_simple_vhost                     70         131          10
+src/mod_ssi                             143         331          60
+src/mod_ssi_expr                         28          70           3
+src/mod_ssi_exprparser                   41         127           9
+src/mod_staticfile                       67         164          25
+src/mod_status                          117         259          30
+src/mod_trigger_b4_dl                    54         111          13
+src/mod_userdir                          61         129          10
+src/mod_usertrack                        51         121          14
+src/mod_webdav                          208         432          83
+src/network                              68         168          37
+src/network_freebsd_sendfile              0           0           0
+src/network_linux_sendfile               19          49          12
+src/network_openssl                       0           0           0
+src/network_solaris_sendfilev             0           0           0
+src/network_write                        13          39          11
+src/network_writev                       19          59          17
+src/plugin                              138         276          18
+src/proc_open                            37         110           9
+src/request                              60         163          38
+src/response                             54         110          17
+src/server                              119         288          72
+src/spawn-fcgi                           17         116          33
+src/splaytree                            21          49          15
+src/stat_cache                           60         136           8
+src/status_counter                       11          38           1
+src/stream                                3          14           1
+-------------------------------------------------------------------
+total                                  5866       13330        1945
+
+Global entities
+================================================================================
+Dictionary
+================================================================================
+attrparam-table             8
+attribute-table            16
+attributes-table           17
+constant-table           1003
+exp-table                1631
+funarg-table              187
+funargs-table             371
+lhost-table                 7
+lval-table                  7
+offset-table              271
+typ-table                1144
+string-table              219
+================================================================================
+fieldinfo-table          1029
+compinfo-table            235
+initinfo-table           1144
+varinfo-table            1096
+offset-init-table        2360

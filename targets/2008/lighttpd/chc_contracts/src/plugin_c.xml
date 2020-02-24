@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:04.381162"/>
+  <cfile name="src/plugin">
+    <data-structures/>
+    <functions>
+      <function name="plugin_free">
+        <parameters>
+          <par name="p" nr="1"/>
+        </parameters>
+      </function>
+      <function name="plugin_init">
+        <parameters/>
+      </function>
+      <function name="plugins_call_cleanup">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_connection_reset">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_connection_close">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_docroot">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_joblist">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_physical">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_request_done">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_sighup">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_subrequest">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_subrequest_start">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_trigger">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_uri_clean">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_handle_uri_raw">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_init">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="plugins_call_set_defaults">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="plugins_free">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="plugins_load">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="plugins_register">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

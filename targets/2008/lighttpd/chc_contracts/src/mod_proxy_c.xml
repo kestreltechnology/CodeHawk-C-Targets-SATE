@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:48.440318"/>
+  <cfile name="src/mod_proxy">
+    <data-structures/>
+    <functions>
+      <function name="handler_ctx_free">
+        <parameters>
+          <par name="hctx" nr="1"/>
+        </parameters>
+      </function>
+      <function name="handler_ctx_init">
+        <parameters/>
+      </function>
+      <function name="mod_proxy_check_extension">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p_d" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_proxy_connection_close_callback">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p_d" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_proxy_free">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_proxy_handle_subrequest">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p_d" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_proxy_init">
+        <parameters/>
+      </function>
+      <function name="mod_proxy_patch_connection">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_proxy_plugin_init">
+        <parameters>
+          <par name="p" nr="1"/>
+        </parameters>
+      </function>
+      <function name="mod_proxy_set_defaults">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_proxy_trigger">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="proxy_append_header">
+        <parameters>
+          <par name="con" nr="1"/>
+          <par name="key" nr="2"/>
+          <par name="value" nr="3"/>
+        </parameters>
+      </function>
+      <function name="proxy_connection_close">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="hctx" nr="2"/>
+        </parameters>
+      </function>
+      <function name="proxy_create_env">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="hctx" nr="2"/>
+        </parameters>
+      </function>
+      <function name="proxy_demux_response">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="hctx" nr="2"/>
+        </parameters>
+      </function>
+      <function name="proxy_establish_connection">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="hctx" nr="2"/>
+        </parameters>
+      </function>
+      <function name="proxy_handle_fdevent">
+        <parameters>
+          <par name="s" nr="1"/>
+          <par name="ctx" nr="2"/>
+          <par name="revents" nr="3"/>
+        </parameters>
+      </function>
+      <function name="proxy_response_parse">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+          <par name="in" nr="4"/>
+        </parameters>
+      </function>
+      <function name="proxy_set_header">
+        <parameters>
+          <par name="con" nr="1"/>
+          <par name="key" nr="2"/>
+          <par name="value" nr="3"/>
+        </parameters>
+      </function>
+      <function name="proxy_set_state">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="hctx" nr="2"/>
+          <par name="state" nr="3"/>
+        </parameters>
+      </function>
+      <function name="proxy_write_request">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="hctx" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:19.604794"/>
+  <cfile name="src/chunk">
+    <data-structures/>
+    <functions>
+      <function name="chunk_free">
+        <parameters>
+          <par name="c" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunk_init">
+        <parameters/>
+      </function>
+      <function name="chunk_reset">
+        <parameters>
+          <par name="c" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_append_buffer">
+        <parameters>
+          <par name="cq" nr="1"/>
+          <par name="mem" nr="2"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_append_buffer_weak">
+        <parameters>
+          <par name="cq" nr="1"/>
+          <par name="mem" nr="2"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_append_chunk">
+        <parameters>
+          <par name="cq" nr="1"/>
+          <par name="c" nr="2"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_append_file">
+        <parameters>
+          <par name="cq" nr="1"/>
+          <par name="fn" nr="2"/>
+          <par name="offset" nr="3"/>
+          <par name="len" nr="4"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_append_mem">
+        <parameters>
+          <par name="cq" nr="1"/>
+          <par name="mem" nr="2"/>
+          <par name="len" nr="3"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_free">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_get_append_buffer">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_get_append_tempfile">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_get_prepend_buffer">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_get_unused_chunk">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_init">
+        <parameters/>
+      </function>
+      <function name="chunkqueue_is_empty">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_length">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_prepend_buffer">
+        <parameters>
+          <par name="cq" nr="1"/>
+          <par name="mem" nr="2"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_prepend_chunk">
+        <parameters>
+          <par name="cq" nr="1"/>
+          <par name="c" nr="2"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_remove_finished_chunks">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_reset">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_set_tempdirs">
+        <parameters>
+          <par name="cq" nr="1"/>
+          <par name="tempdirs" nr="2"/>
+        </parameters>
+      </function>
+      <function name="chunkqueue_written">
+        <parameters>
+          <par name="cq" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

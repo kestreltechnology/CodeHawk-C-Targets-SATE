@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:25.937267"/>
+  <cfile name="src/fdevent_freebsd_kqueue">
+    <data-structures/>
+    <functions>
+      <function name="fdevent_freebsd_kqueue_init">
+        <parameters>
+          <par name="ev" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

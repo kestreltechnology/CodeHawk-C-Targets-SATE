@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:34.771927"/>
+  <cfile name="src/log">
+    <data-structures/>
+    <functions>
+      <function name="log_error_close">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="log_error_cycle">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="log_error_open">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="log_error_write">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="filename" nr="2"/>
+          <par name="line" nr="3"/>
+          <par name="fmt" nr="4"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

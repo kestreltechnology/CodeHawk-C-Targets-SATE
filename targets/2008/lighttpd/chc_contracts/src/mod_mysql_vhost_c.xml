@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:47.309345"/>
+  <cfile name="src/mod_mysql_vhost">
+    <data-structures/>
+    <functions>
+      <function name="mod_mysql_vhost_plugin_init">
+        <parameters>
+          <par name="p" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

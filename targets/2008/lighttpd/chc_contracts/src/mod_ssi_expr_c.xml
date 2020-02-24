@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:56.013394"/>
+  <cfile name="src/mod_ssi_expr">
+    <data-structures/>
+    <functions>
+      <function name="ssi_eval_expr">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+          <par name="expr" nr="4"/>
+        </parameters>
+      </function>
+      <function name="ssi_expr_tokenizer">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+          <par name="t" nr="4"/>
+          <par name="token_id" nr="5"/>
+          <par name="token" nr="6"/>
+        </parameters>
+      </function>
+      <function name="ssi_val_free">
+        <parameters>
+          <par name="s" nr="1"/>
+        </parameters>
+      </function>
+      <function name="ssi_val_init">
+        <parameters/>
+      </function>
+      <function name="ssi_val_tobool">
+        <parameters>
+          <par name="B" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

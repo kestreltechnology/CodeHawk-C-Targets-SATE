@@ -1,0 +1,243 @@
+Primary Proof Obligations
+c files                          stmt     local       api  contract      open  violated     total
+-------------------------------------------------------------------------------------------------
+src/array                         960       737       329        31       537         0      2594
+src/bitset                        257        74        43        16        13         0       403
+src/buffer                       1505      1519       414        53       618         0      4109
+src/chunk                         266       654       114        16       495         0      1545
+src/configfile                   3615      2564       873       121      2167         0      9340
+src/configfile-glue               947       846       377         1       773         0      2944
+src/configparser                 2620      1479       734        75      1840         1      6748
+src/connections                  1542      2553      1087        83      1886         0      7151
+src/connections-glue              102        28         1         0         0         0       131
+src/crc32                          20         9         2         0         2         0        33
+src/data_array                     44        97        27        11        71         0       250
+src/data_config                   370       245        79        15       358         0      1067
+src/data_count                     67       104        31        11        49         0       262
+src/data_fastcgi                   64        99        27        13        83         0       286
+src/data_integer                   63        89        24        11        47         0       234
+src/data_string                   123       189        69        12       155         0       548
+src/etag                           64        74        19         0        24         0       181
+src/fdevent                       643       289       137        27        82         0      1178
+src/fdevent_freebsd_kqueue         29         0         0         0         0         0        29
+src/fdevent_linux_rtsig           609       426       222        47       110         0      1414
+src/fdevent_linux_sysepoll        306       158        52        21        19         0       556
+src/fdevent_poll                  489       294       172        49        58         0      1062
+src/fdevent_select                401       227        57        12        71         0       768
+src/fdevent_solaris_devpoll        29         0         0         0         0         0        29
+src/http-header-glue              461       497       117        16       327         0      1418
+src/http_auth                    2460      1359       262        50      1324         0      5455
+src/http_auth_digest               58        12        10         0         7         0        87
+src/http_chunk                    138       159        87         0        23         0       407
+src/inet_ntop_cache                71       119        33        29        15         0       267
+src/joblist                        98       219       220        16        57         0       610
+src/keyvalue                      629       702       273        93       437         0      2134
+src/lemon                        8965      7818      2172       447      7706         1     27108
+src/lighttpd-angel                233        25         3         4        23         0       288
+src/log                           296       310       230        11       185         5      1032
+src/md5                           995       770        79         0       388         0      2232
+src/mod_access                    279       223        74         9       316         0       901
+src/mod_accesslog                1319      1253       379        70      1953         0      4974
+src/mod_alias                     321       263        85        11       519         0      1199
+src/mod_auth                     1212       939       146        59      1689         0      4045
+src/mod_cgi                      2134      2215       740       119      2396         2      7604
+src/mod_cml                       468       451       142        19       547         0      1627
+src/mod_compress                 1101      1024       383        53      1006         0      3567
+src/mod_dirlisting               1826      1457       347       103      1529         1      5262
+src/mod_evasive                   245       214        76        10       177         0       722
+src/mod_evhost                    486       554       148        18       738         0      1944
+src/mod_expire                    615       530       120        64       562        24      1891
+src/mod_extforward                601       522       166        19       457         0      1765
+src/mod_fastcgi                  6162      6504      2983       260      7772         2     23681
+src/mod_flv_streaming             379       356       100        11       436         0      1282
+src/mod_indexfile                 345       319       100        19       368         0      1151
+src/mod_mysql_vhost                12         8         2         0         0         0        22
+src/mod_proxy                    1727      2004       704        72      2186         1      6693
+src/mod_redirect                  488       391        92        14       596         0      1581
+src/mod_rewrite                   833       712       213        43       825         0      2626
+src/mod_rrdtool                   788       704       318        28       838         0      2676
+src/mod_scgi                     4418      4600      1859       168      5753         2     16798
+src/mod_secure_download           485       426       120        17       559         0      1607
+src/mod_setenv                    391       372       115        17       533         0      1428
+src/mod_simple_vhost              469       548       198        22       621         0      1858
+src/mod_ssi                      2253      1548       709        60      1724         0      6294
+src/mod_ssi_expr                  609       591       280         8       290         0      1778
+src/mod_ssi_exprparser            695       618       192        33       581         1      2119
+src/mod_staticfile                762       781       236        13       807         0      2599
+src/mod_status                   1581      1773       344        26      1004         6      4728
+src/mod_trigger_b4_dl             627       398        77        34       665         0      1801
+src/mod_userdir                   468       472       150        17       725         0      1832
+src/mod_usertrack                 558       431        88        27       566         0      1670
+src/mod_webdav                   2254      2851       477        79      2183         1      7844
+src/network                       731       855       165        77       589         3      2417
+src/network_linux_sendfile        153       205         8        24       307         0       697
+src/network_write                 143       157         8        12       271         0       591
+src/network_writev                298       310         8        22       628         1      1266
+src/plugin                       1445      1143       350        83      1261         0      4282
+src/proc_open                     499       391        73        17       118         0      1098
+src/request                      1787      1340       402         6      1988         0      5523
+src/response                     1132       910       339         4      1303         1      3688
+src/server                       3065      1949       146       100      1387         0      6647
+src/spawn-fcgi                   1176       330         4        34       162         2      1706
+src/splaytree                     271       270         4        30       607         0      1182
+src/stat_cache                    249       477       203        18       401         0      1348
+src/status_counter                 30        97        12         0        32         0       171
+src/stream                         46        52        30         6        12         0       146
+-------------------------------------------------------------------------------------------------
+total                           77475     69282     22291      3246     69937        54    242231
+percent                         31.98     28.60      9.20      1.34     28.87      0.02
+
+Supporting Proof Obligations
+c files                          stmt     local       api  contract      open  violated     total
+-------------------------------------------------------------------------------------------------
+src/array                           0         0        78         0        22         0       100
+src/bitset                          0         0         0         0         1         0         1
+src/buffer                          4        11       150         0        42         0       207
+src/chunk                           2         1       146         0       173         0       322
+src/configfile                    102         3       252         0      1165         0      1522
+src/configfile-glue                10         0       220         0       353         0       583
+src/configparser                   38        52        93         0      1727         0      1910
+src/connections                    11         6       747         0       887         0      1651
+src/data_array                      0         0         1         0        74         0        75
+src/data_config                     0         0         0         0       126         0       126
+src/data_count                      0         0         0         0        27         0        27
+src/data_fastcgi                    0         0         0         0        54         0        54
+src/data_integer                    0         0         0         0        27         0        27
+src/data_string                     0         0         0         0       141         0       141
+src/etag                            4         0        92         0         4         0       100
+src/fdevent                         0         2         3         0         7         0        12
+src/fdevent_linux_rtsig             0         0         4         0        27         0        31
+src/fdevent_poll                    0         0         0         0         3         0         3
+src/http-header-glue                2         0        13         0       246         0       261
+src/http_auth                     128       261        83         0       637        27      1109
+src/http_chunk                      0         8        87         0       119         0       214
+src/joblist                         0         0         0         0         4         0         4
+src/keyvalue                        6         0         2         0        14         0        22
+src/lemon                         112       158       248         1       528         0      1047
+src/log                            13        10         2         0       247         0       272
+src/md5                            13         6        40         0         9         3        68
+src/mod_access                      3         0        17         0        38         0        58
+src/mod_accesslog                  20         0        27         0       575         0       622
+src/mod_alias                       3         0        18         0        90         0       111
+src/mod_auth                       36         3        44         0       570         0       653
+src/mod_cgi                        36        79       177         0       612         2       904
+src/mod_cml                         9         0        41         0       201         0       251
+src/mod_compress                   21         0        91         0       336         0       448
+src/mod_dirlisting                 71         1       311         0       634         0      1017
+src/mod_evasive                     4         0        27         0        26         0        57
+src/mod_evhost                      8         3       100         0       314         0       425
+src/mod_expire                      6         0        33         0       107         0       146
+src/mod_extforward                  7         0        57         0       183         0       247
+src/mod_fastcgi                    47        36       755         0      2861         2      3699
+src/mod_flv_streaming               7         0        54         0       188         0       249
+src/mod_indexfile                   6         0        29         0       155         0       190
+src/mod_proxy                      25         6       270         0      1070         1      1371
+src/mod_redirect                    3         0        23         0       123         0       149
+src/mod_rewrite                    13         4        28         0       197         0       242
+src/mod_rrdtool                     9         0        22         0       323         0       354
+src/mod_scgi                       59        34       585         0      2187         1      2865
+src/mod_secure_download            17        10        10         0       177         3       214
+src/mod_setenv                      7         0        15         0       235         0       257
+src/mod_simple_vhost               14         0       163         0       297         0       474
+src/mod_ssi                        14         2       260         0      1190         0      1466
+src/mod_ssi_expr                   10         5       141         0        78         0       234
+src/mod_ssi_exprparser             18        46        44         0       224         0       332
+src/mod_staticfile                 23         0        96         0       426         0       545
+src/mod_status                    145        18       373         0      1602         0      2138
+src/mod_trigger_b4_dl              19         0        21         0       144         0       184
+src/mod_userdir                    12         0        26         0       245         0       283
+src/mod_usertrack                  22        18        17         0       234         3       291
+src/mod_webdav                     54        28       514         0      1590         0      2186
+src/network                         0         1        85         0       285         0       371
+src/network_linux_sendfile          1         0         8         0        14         0        23
+src/network_write                   1         0         8         0        14         0        23
+src/network_writev                  1         0         8         0        15         0        24
+src/plugin                          0        12        13         0       102         0       127
+src/proc_open                      32         2        34         0       200         0       268
+src/request                        17         0         3         0       441         0       461
+src/response                       41         2       192         0       701         0       936
+src/server                          1        89        21         0      3395         0      3506
+src/spawn-fcgi                      0         0         0         0         1         0         1
+src/splaytree                       0         0         2         0         1         0         3
+src/stat_cache                      5         3        41         0       209         0       258
+src/status_counter                  0         0        32         0        61         0        93
+-------------------------------------------------------------------------------------------------
+total                            1292       920      7097         1     29335        42     38645
+percent                          3.34      2.38     18.36      0.00     75.91      0.11
+
+
+Proof Obligation Statistics
+
+Primary Proof Obligations
+                                  stmt     local       api  contract      open  violated     total
+--------------------------------------------------------------------------------------------------
+allocation-base                      0         1       116        16       136         0       269
+cast                              3966         0         0         0        66         0      4032
+common-base                          0         0         0         0        91         0        91
+common-base-type                     0         0         0         0        79         0        79
+controlled-resource                301         0         0         0       118         0       419
+format-cast                        200         0         0         0         0         0       200
+format-string                      376         0         0         0         5         0       381
+in-scope                          7737     16973         0         0      8725         0     33435
+index-lower-bound                 1957        66        23         0        50         0      2096
+index-upper-bound                 1872        76        19         0       129         2      2096
+initialized                      11223     17599      5977       291      7779         0     42869
+initialized-range                  821         4         0         0       942         0      1767
+int-overflow                       202        70        93        12       554        12       931
+int-underflow                      542       109        27        12       241        12       931
+lower-bound                       8323     14529      1857         0      8136         0     32845
+no-overlap                          94        19         0         0       137         0       250
+non-negative                       423        11         0         0         2         0       436
+not-null                          3276      1589      9391       288      7759         0     22303
+not-zero                            91         2         8         0         6         0       107
+null-terminated                   1125         5         0         0       721         0      1851
+pointer-cast                      3767        12       207       155       490         0      4631
+ptr-lower-bound                   1672       235        23         0       292         1      2222
+ptr-upper-bound                   1015        10        29         2       869         1      1925
+ptr-upper-bound-deref              304         0       219         4      1691         0      2218
+signed-to-signed-cast-lb          1231         2         6         0        27         0      1266
+signed-to-signed-cast-ub          1221         2         6         0        37         0      1266
+signed-to-unsigned-cast-lb        1000        79        25         3       251         2      1358
+signed-to-unsigned-cast-ub        1297         3         0         1        57         1      1358
+stack-address-escape              3029        42         0       289       621         0      3981
+uint-overflow                     1048        72        74         0      1140         0      2334
+uint-underflow                    1341       632        31         0       330        20      2334
+unsigned-to-signed-cast            308        15        17         0       168         0       508
+unsigned-to-unsigned-cast           45        31         5         2        41         2       124
+upper-bound                       8216     13489      1857       860      8423         0     32845
+valid-mem                         8357      3604      2280      1311     19673         0     35225
+value-constraint                   301         1         1         0       128         1       431
+var-args                           360         0         0         0        21         0       381
+width-overflow                     434         0         0         0         2         0       436
+--------------------------------------------------------------------------------------------------
+total                            77475     69282     22291      3246     69937        54    242231
+percent                          31.98     28.60      9.20      1.34     28.87      0.02
+
+Supporting Proof Obligations
+                                  stmt     local       api  contract      open  violated     total
+--------------------------------------------------------------------------------------------------
+allocation-base                      0         0       294         0      2277         0      2571
+distinct-region                      0         0         0         0        97         0        97
+index-lower-bound                   11        20         6         0        16         0        53
+index-upper-bound                   11         2         8         0        31         0        52
+initialized                         23       283      3066         0      8236         0     11608
+int-overflow                         0         7        14         0        57         0        78
+int-underflow                        0         1        16         0        56         0        73
+lower-bound                          2        43       524         0      3694         0      4263
+not-null                           734       143      1669         0      3630         0      6176
+not-zero                             6         0         0         0         0         0         6
+pointer-cast                         2         0        37         0        74         0       113
+ptr-lower-bound                      0         4         2         0        51         0        57
+ptr-upper-bound                     17        12        37         0       929         0       995
+ptr-upper-bound-deref               22       275        95         0       686        36      1078
+signed-to-unsigned-cast-lb           7         1         6         0        29         0        43
+uint-overflow                      442        66       141         0      1069         0      1718
+uint-underflow                       0        16        32         0       393         6       441
+unsigned-to-signed-cast              9         1        25         0       199         0       234
+unsigned-to-unsigned-cast            0         0         0         0        11         0        11
+upper-bound                          2        43       524         0      3694         0      4263
+valid-mem                            3         3       601         1      4105         0      4713
+value-constraint                     1         0         0         0         1         0         2
+--------------------------------------------------------------------------------------------------
+total                             1292       920      7097         1     29335        42     38645
+percent                           3.34      2.38     18.36      0.00     75.91      0.11

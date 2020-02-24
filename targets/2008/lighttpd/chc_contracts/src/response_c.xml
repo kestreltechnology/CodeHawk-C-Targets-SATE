@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:05.809197"/>
+  <cfile name="src/response">
+    <data-structures/>
+    <functions>
+      <function name="http_response_prepare">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="http_response_write_header">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

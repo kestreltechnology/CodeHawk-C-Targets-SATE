@@ -1,0 +1,7 @@
+{
+    "targets": {
+	"lighttpd": {
+	    "path": "2008/lighttpd"
+	}
+    }
+}

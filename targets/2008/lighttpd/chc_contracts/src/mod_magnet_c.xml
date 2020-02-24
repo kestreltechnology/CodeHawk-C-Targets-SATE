@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:47.295657"/>
+  <cfile name="src/mod_magnet">
+    <data-structures/>
+    <functions>
+      <function name="mod_magnet_plugin_init">
+        <parameters>
+          <par name="p" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:41.133783"/>
+  <cfile name="src/mod_dirlisting">
+    <data-structures/>
+    <functions>
+      <function name="excludes_buffer_append">
+        <parameters>
+          <par name="exb" nr="1"/>
+          <par name="string" nr="2"/>
+        </parameters>
+      </function>
+      <function name="excludes_buffer_free">
+        <parameters>
+          <par name="exb" nr="1"/>
+        </parameters>
+      </function>
+      <function name="excludes_buffer_init">
+        <parameters/>
+      </function>
+      <function name="http_dirls_sort">
+        <parameters>
+          <par name="ent" nr="1"/>
+          <par name="num" nr="2"/>
+        </parameters>
+      </function>
+      <function name="http_list_directory">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+          <par name="dir" nr="4"/>
+        </parameters>
+      </function>
+      <function name="http_list_directory_footer">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+          <par name="out" nr="4"/>
+        </parameters>
+      </function>
+      <function name="http_list_directory_header">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+          <par name="out" nr="4"/>
+        </parameters>
+      </function>
+      <function name="http_list_directory_sizefmt">
+        <parameters>
+          <par name="buf" nr="1"/>
+          <par name="size" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_dirlisting_free">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_dirlisting_init">
+        <parameters/>
+      </function>
+      <function name="mod_dirlisting_patch_connection">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_dirlisting_plugin_init">
+        <parameters>
+          <par name="p" nr="1"/>
+        </parameters>
+      </function>
+      <function name="mod_dirlisting_set_defaults">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_dirlisting_subrequest">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p_d" nr="3"/>
+        </parameters>
+      </function>
+      <function name="parse_config_entry">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="s" nr="2"/>
+          <par name="ca" nr="3"/>
+          <par name="option" nr="4"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

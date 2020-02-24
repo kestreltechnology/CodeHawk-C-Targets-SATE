@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:29.245173"/>
+  <cfile name="src/http_chunk">
+    <data-structures/>
+    <functions>
+      <function name="http_chunk_append_buffer">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="mem" nr="3"/>
+        </parameters>
+      </function>
+      <function name="http_chunk_append_file">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="fn" nr="3"/>
+          <par name="offset" nr="4"/>
+          <par name="len" nr="5"/>
+        </parameters>
+      </function>
+      <function name="http_chunk_append_len">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="len" nr="3"/>
+        </parameters>
+      </function>
+      <function name="http_chunk_append_mem">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="mem" nr="3"/>
+          <par name="len" nr="4"/>
+        </parameters>
+      </function>
+      <function name="http_chunkqueue_length">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

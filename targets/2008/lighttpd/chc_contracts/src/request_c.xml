@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:05.375366"/>
+  <cfile name="src/request">
+    <data-structures/>
+    <functions>
+      <function name="http_request_header_finished">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="http_request_parse">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+        </parameters>
+      </function>
+      <function name="http_request_split_value">
+        <parameters>
+          <par name="vals" nr="1"/>
+          <par name="b" nr="2"/>
+        </parameters>
+      </function>
+      <function name="request_check_hostname">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="host" nr="3"/>
+        </parameters>
+      </function>
+      <function name="request_uri_is_valid_char">
+        <parameters>
+          <par name="c" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

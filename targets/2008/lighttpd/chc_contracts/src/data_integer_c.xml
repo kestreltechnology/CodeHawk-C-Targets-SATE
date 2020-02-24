@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:25.453413"/>
+  <cfile name="src/data_integer">
+    <data-structures/>
+    <functions>
+      <function name="data_integer_copy">
+        <parameters>
+          <par name="s" nr="1"/>
+        </parameters>
+      </function>
+      <function name="data_integer_free">
+        <parameters>
+          <par name="d" nr="1"/>
+        </parameters>
+      </function>
+      <function name="data_integer_init">
+        <parameters/>
+      </function>
+      <function name="data_integer_insert_dup">
+        <parameters>
+          <par name="dst" nr="1"/>
+          <par name="src" nr="2"/>
+        </parameters>
+      </function>
+      <function name="data_integer_print">
+        <parameters>
+          <par name="d" nr="1"/>
+          <par name="depth" nr="2"/>
+        </parameters>
+      </function>
+      <function name="data_integer_reset">
+        <parameters>
+          <par name="d" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

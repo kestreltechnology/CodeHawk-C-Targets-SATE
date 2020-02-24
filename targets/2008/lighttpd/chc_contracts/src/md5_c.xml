@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:35.036776"/>
+  <cfile name="src/md5">
+    <data-structures/>
+    <functions>
+      <function name="Decode">
+        <parameters>
+          <par name="output" nr="1"/>
+          <par name="input" nr="2"/>
+          <par name="len" nr="3"/>
+        </parameters>
+      </function>
+      <function name="Encode">
+        <parameters>
+          <par name="output" nr="1"/>
+          <par name="input" nr="2"/>
+          <par name="len" nr="3"/>
+        </parameters>
+      </function>
+      <function name="MD5Transform">
+        <parameters>
+          <par name="state" nr="1"/>
+          <par name="block" nr="2"/>
+        </parameters>
+      </function>
+      <function name="MD5_Final">
+        <parameters>
+          <par name="digest" nr="1"/>
+          <par name="context" nr="2"/>
+        </parameters>
+      </function>
+      <function name="MD5_Init">
+        <parameters>
+          <par name="context" nr="1"/>
+        </parameters>
+      </function>
+      <function name="MD5_Update">
+        <parameters>
+          <par name="context" nr="1"/>
+          <par name="input" nr="2"/>
+          <par name="inputLen" nr="3"/>
+        </parameters>
+      </function>
+      <function name="MD5_memcpy">
+        <parameters>
+          <par name="output" nr="1"/>
+          <par name="input" nr="2"/>
+          <par name="len" nr="3"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

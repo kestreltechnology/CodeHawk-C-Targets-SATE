@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:03.149076"/>
+  <cfile name="src/network_freebsd_sendfile">
+    <data-structures/>
+    <functions/>
+  </cfile>
+</c-analysis>

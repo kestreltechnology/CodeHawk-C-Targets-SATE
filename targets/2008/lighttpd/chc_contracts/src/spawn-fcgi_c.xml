@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:07.565115"/>
+  <cfile name="src/spawn-fcgi">
+    <data-structures/>
+    <functions>
+      <function name="fcgi_spawn_connection">
+        <parameters>
+          <par name="appPath" nr="1"/>
+          <par name="addr" nr="2"/>
+          <par name="port" nr="3"/>
+          <par name="unixsocket" nr="4"/>
+          <par name="child_count" nr="5"/>
+          <par name="pid_fd" nr="6"/>
+          <par name="nofork" nr="7"/>
+        </parameters>
+      </function>
+      <function name="main">
+        <parameters>
+          <par name="argc" nr="1"/>
+          <par name="argv" nr="2"/>
+        </parameters>
+      </function>
+      <function name="show_help">
+        <parameters/>
+      </function>
+      <function name="show_version">
+        <parameters/>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

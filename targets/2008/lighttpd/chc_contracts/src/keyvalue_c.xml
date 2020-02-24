@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:29.784712"/>
+  <cfile name="src/keyvalue">
+    <data-structures/>
+    <functions>
+      <function name="get_http_method_key">
+        <parameters>
+          <par name="s" nr="1"/>
+        </parameters>
+      </function>
+      <function name="get_http_method_name">
+        <parameters>
+          <par name="i" nr="1"/>
+        </parameters>
+      </function>
+      <function name="get_http_status_body_name">
+        <parameters>
+          <par name="i" nr="1"/>
+        </parameters>
+      </function>
+      <function name="get_http_status_name">
+        <parameters>
+          <par name="i" nr="1"/>
+        </parameters>
+      </function>
+      <function name="get_http_version_key">
+        <parameters>
+          <par name="s" nr="1"/>
+        </parameters>
+      </function>
+      <function name="get_http_version_name">
+        <parameters>
+          <par name="i" nr="1"/>
+        </parameters>
+      </function>
+      <function name="httpauth_keyvalue_buffer_append">
+        <parameters>
+          <par name="kvb" nr="1"/>
+          <par name="key" nr="2"/>
+          <par name="realm" nr="3"/>
+          <par name="type" nr="4"/>
+        </parameters>
+      </function>
+      <function name="httpauth_keyvalue_buffer_free">
+        <parameters>
+          <par name="kvb" nr="1"/>
+        </parameters>
+      </function>
+      <function name="httpauth_keyvalue_buffer_init">
+        <parameters/>
+      </function>
+      <function name="keyvalue_buffer_append">
+        <parameters>
+          <par name="kvb" nr="1"/>
+          <par name="key" nr="2"/>
+          <par name="value" nr="3"/>
+        </parameters>
+      </function>
+      <function name="keyvalue_buffer_free">
+        <parameters>
+          <par name="kvb" nr="1"/>
+        </parameters>
+      </function>
+      <function name="keyvalue_buffer_init">
+        <parameters/>
+      </function>
+      <function name="keyvalue_get_key">
+        <parameters>
+          <par name="kv" nr="1"/>
+          <par name="s" nr="2"/>
+        </parameters>
+      </function>
+      <function name="keyvalue_get_value">
+        <parameters>
+          <par name="kv" nr="1"/>
+          <par name="k" nr="2"/>
+        </parameters>
+      </function>
+      <function name="pcre_keyvalue_buffer_append">
+        <parameters>
+          <par name="kvb" nr="1"/>
+          <par name="key" nr="2"/>
+          <par name="value" nr="3"/>
+        </parameters>
+      </function>
+      <function name="pcre_keyvalue_buffer_free">
+        <parameters>
+          <par name="kvb" nr="1"/>
+        </parameters>
+      </function>
+      <function name="pcre_keyvalue_buffer_init">
+        <parameters/>
+      </function>
+      <function name="s_keyvalue_buffer_append">
+        <parameters>
+          <par name="kvb" nr="1"/>
+          <par name="key" nr="2"/>
+          <par name="value" nr="3"/>
+        </parameters>
+      </function>
+      <function name="s_keyvalue_buffer_free">
+        <parameters>
+          <par name="kvb" nr="1"/>
+        </parameters>
+      </function>
+      <function name="s_keyvalue_buffer_init">
+        <parameters/>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

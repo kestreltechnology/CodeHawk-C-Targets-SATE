@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:38.452749"/>
+  <cfile name="src/mod_cml">
+    <data-structures/>
+    <functions>
+      <function name="cache_call_lua">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+          <par name="cml_file" nr="4"/>
+        </parameters>
+      </function>
+      <function name="mod_cml_free">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_cml_init">
+        <parameters/>
+      </function>
+      <function name="mod_cml_is_handled">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p_d" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_cml_patch_connection">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_cml_plugin_init">
+        <parameters>
+          <par name="p" nr="1"/>
+        </parameters>
+      </function>
+      <function name="mod_cml_power_magnet">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p_d" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_cml_set_defaults">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

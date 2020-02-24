@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:54.057205"/>
+  <cfile name="src/mod_secure_download">
+    <data-structures/>
+    <functions>
+      <function name="is_hex_len">
+        <parameters>
+          <par name="str" nr="1"/>
+          <par name="len" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_secdownload_free">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_secdownload_init">
+        <parameters/>
+      </function>
+      <function name="mod_secdownload_patch_connection">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_secdownload_plugin_init">
+        <parameters>
+          <par name="p" nr="1"/>
+        </parameters>
+      </function>
+      <function name="mod_secdownload_set_defaults">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_secdownload_uri_handler">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p_d" nr="3"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

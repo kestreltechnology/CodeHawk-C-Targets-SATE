@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:59:03.148434"/>
+  <cfile name="src/network">
+    <data-structures/>
+    <functions>
+      <function name="network_close">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="network_init">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="network_register_fdevents">
+        <parameters>
+          <par name="srv" nr="1"/>
+        </parameters>
+      </function>
+      <function name="network_server_handle_fdevent">
+        <parameters>
+          <par name="s" nr="1"/>
+          <par name="context" nr="2"/>
+          <par name="revents" nr="3"/>
+        </parameters>
+      </function>
+      <function name="network_server_init">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="host_token" nr="2"/>
+          <par name="s" nr="3"/>
+        </parameters>
+      </function>
+      <function name="network_write_chunkqueue">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="cq" nr="3"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:41.685400"/>
+  <cfile name="src/mod_evhost">
+    <data-structures/>
+    <functions>
+      <function name="mod_evhost_free">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_evhost_init">
+        <parameters/>
+      </function>
+      <function name="mod_evhost_parse_host">
+        <parameters>
+          <par name="con" nr="1"/>
+          <par name="host" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_evhost_parse_pattern">
+        <parameters>
+          <par name="s" nr="1"/>
+        </parameters>
+      </function>
+      <function name="mod_evhost_patch_connection">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p" nr="3"/>
+        </parameters>
+      </function>
+      <function name="mod_evhost_plugin_init">
+        <parameters>
+          <par name="p" nr="1"/>
+        </parameters>
+      </function>
+      <function name="mod_evhost_set_defaults">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="p_d" nr="2"/>
+        </parameters>
+      </function>
+      <function name="mod_evhost_uri_handler">
+        <parameters>
+          <par name="srv" nr="1"/>
+          <par name="con" nr="2"/>
+          <par name="p_d" nr="3"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

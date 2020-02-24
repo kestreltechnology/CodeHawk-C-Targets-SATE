@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-20 13:58:25.629792"/>
+  <cfile name="src/etag">
+    <data-structures/>
+    <functions>
+      <function name="etag_create">
+        <parameters>
+          <par name="etag" nr="1"/>
+          <par name="st" nr="2"/>
+          <par name="flags" nr="3"/>
+        </parameters>
+      </function>
+      <function name="etag_is_equal">
+        <parameters>
+          <par name="etag" nr="1"/>
+          <par name="matches" nr="2"/>
+        </parameters>
+      </function>
+      <function name="etag_mutate">
+        <parameters>
+          <par name="mut" nr="1"/>
+          <par name="etag" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>
