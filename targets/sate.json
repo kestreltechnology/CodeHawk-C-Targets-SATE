@@ -2,6 +2,9 @@
     "targets": {
 	"lighttpd": {
 	    "path": "2008/lighttpd"
+	},
+	"nagios": {
+	    "path": "2008/nagios/base"
 	}
     }
 }

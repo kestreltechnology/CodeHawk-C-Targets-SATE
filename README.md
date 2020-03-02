@@ -6,7 +6,8 @@ NIST SATE test cases prepared for analysis by the
 - [Description](#description)
 - [Access from the CodeHawk-C analyzer](#access-from-the-codehawk-c-analyzer)
 - [Applications](#applications)
-  - [Lighttpd](#lighttpd)
+  - [lighttpd](#lighttpd)
+  - [nagios](#nagios)
 
 ## Description
 This repository contains six of the benchmark programs used in the
@@ -60,12 +61,28 @@ More scripts are available in the
   [SATE 2008](https://samate.nist.gov/SATE2008.html)
 - *size*: 89 .c files, 941 functions, 51,161 LOC
 - *semantic size*: 18,528 statments, 7481 calls, 10,097 assignments
-  ([more detailed statistics](targets/2008/lighttpd/latestresults/projectstats.txt)
+  ([more detailed statistics](targets/2008/lighttpd/latestresults/projectstats.txt))
 - *primary proof obligations (ppo's)*: 242,231
-- *current analysis status*: 172,294 ppo's (71.1%) proven safe or
-  delegated, 69,937 ppo's (28.9%) not yet proven
+- *current analysis status*: 175,011 ppo's (72.2%) proven safe or
+  delegated, 67,332 ppo's (27.8%) not yet proven
   ([more detailed results](targets/2008/lighttpd/latestresults/summaryresults.txt)
   broken down by source file and proof obligation kind).
+- *contract conditions*: 112 preconditions, 350 postconditions
 - *analysis time*: approximately 3 hrs (single core), or 1 hr 15 mins
-  (4 cores).
+  (4 cores), or 35 mins (10 cores).
 
+
+### nagios
+
+- *description*: version 2.10 of the [nagios](https://www.nagios.org)
+  open-source infrastructure monitoring application, used as benchmark
+  application in [SATE 2008](https://samate.nist.gov/SATE2008.html)
+- *size*: 25 .c files, 602 functions, 48,452 LOC
+- *semantic size*: 20,163 statements, 8091 calls, 7999 assignments
+  ([more detailed statistics](targets/2008/nagios/base/latestresults/projectstats.txt))
+- *primary proof obligations (ppo's)*: 204,533
+- *current analysis status*: 153,573 ppo's (75.1%) proven safe or
+  delegated, 50,960 (24.9%) not yet proven
+  ([more detailed results](targets/2008/nagios/base/latestresults/summaryresults.txt))
+  broken down by source file and proof obligation kind
+- *analysis time*: approximately 42 mins (4 cores)
