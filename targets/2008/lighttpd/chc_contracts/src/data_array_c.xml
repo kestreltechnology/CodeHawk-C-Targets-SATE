@@ -16,6 +16,49 @@
       </function>
       <function name="data_array_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<not-null/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="key"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="value"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="data_array_insert_dup">
         <parameters>

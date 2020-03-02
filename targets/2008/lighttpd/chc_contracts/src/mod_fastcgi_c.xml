@@ -3,6 +3,9 @@
   <header info="cfile" name="cfile" time="2020-02-20 13:58:46.806814"/>
   <cfile name="src/mod_fastcgi">
     <data-structures/>
+    <global-variables>
+      <gvar name="environ"/>
+    </global-variables>
     <functions>
       <function name="env_add">
         <parameters>
@@ -27,6 +30,15 @@
       </function>
       <function name="fastcgi_extensions_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fastcgi_get_packet">
         <parameters>
@@ -42,6 +54,127 @@
       </function>
       <function name="fastcgi_host_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<not-null/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="bin_env"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="bin_env_copy"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="bin_path"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="docroot"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="host"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="id"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="strip_request_uri"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="unixsocket"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fastcgi_process_free">
         <parameters>
@@ -50,6 +183,49 @@
       </function>
       <function name="fastcgi_process_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<not-null/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="connection_name"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="unixsocket"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fastcgi_status_copy_procname">
         <parameters>
@@ -158,6 +334,15 @@
           <par name="contentLength" nr="4"/>
           <par name="paddingLength" nr="5"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fcgi_patch_connection">
         <parameters>
@@ -178,6 +363,15 @@
           <par name="p" nr="2"/>
           <par name="request_id" nr="3"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fcgi_requestid_new">
         <parameters>
@@ -206,6 +400,15 @@
           <par name="hctx" nr="2"/>
           <par name="state" nr="3"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fcgi_spawn_connection">
         <parameters>
@@ -214,6 +417,33 @@
           <par name="host" nr="3"/>
           <par name="proc" nr="4"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>environ</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>environ</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fcgi_write_request">
         <parameters>
@@ -228,6 +458,23 @@
       </function>
       <function name="handler_ctx_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<not-null/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="mod_fastcgi_free">
         <parameters>

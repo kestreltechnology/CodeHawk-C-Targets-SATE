@@ -6,6 +6,15 @@
     <functions>
       <function name="daemonize">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="main">
         <parameters>
@@ -20,12 +29,464 @@
       </function>
       <function name="server_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<not-null/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="cond_check_buf"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="config_context"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="config_touched"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="conns"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="cur_ts"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="empty_string"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="errorlog_buf"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="errorlog_fd"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="errorlog_mode"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="fdwaitqueue"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="joblist"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="parse_full_path"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="response_header"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="response_range"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="bindhost"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="changeroot"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="errorlog_file"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="event_handler"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="groupname"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="modules"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="modules_dir"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="network_backend"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="pid_file"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="upload_tempdirs"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="srvconf">
+		      <field name="username"/>
+		    </field>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="split_vals"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="status"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="tmp_buf"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="tmp_chunk_len"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="ts_date_str"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="ts_debug_str"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<allocation-base/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="show_features">
         <parameters/>
       </function>
       <function name="show_help">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="show_version">
         <parameters/>

@@ -3,6 +3,10 @@
   <header info="cfile" name="cfile" time="2020-02-20 13:58:56.388199"/>
   <cfile name="src/mod_ssi_exprparser">
     <data-structures/>
+    <global-variables>
+      <gvar name="yyTraceFILE"/>
+      <gvar name="yyTracePrompt"/>
+    </global-variables>
     <functions>
       <function name="ssiexprparser">
         <parameters>
@@ -11,11 +15,46 @@
           <par name="yyminor" nr="3"/>
           <par name="ctx" nr="4"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTraceFILE</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="ssiexprparserAlloc">
         <parameters>
           <par name="mallocProc" nr="1"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="ssiexprparserFree">
         <parameters>
@@ -38,6 +77,32 @@
         <parameters>
           <par name="yypParser" nr="1"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTraceFILE</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="yy_destructor">
         <parameters>
@@ -50,28 +115,124 @@
           <par name="pParser" nr="1"/>
           <par name="iLookAhead" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="yy_find_shift_action">
         <parameters>
           <par name="pParser" nr="1"/>
           <par name="iLookAhead" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="yy_parse_failed">
         <parameters>
           <par name="yypParser" nr="1"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTraceFILE</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="yy_pop_parser_stack">
         <parameters>
           <par name="pParser" nr="1"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTraceFILE</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="yy_reduce">
         <parameters>
           <par name="yypParser" nr="1"/>
           <par name="yyruleno" nr="2"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTraceFILE</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="yy_shift">
         <parameters>
@@ -80,6 +241,32 @@
           <par name="yyMajor" nr="3"/>
           <par name="yypMinor" nr="4"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTraceFILE</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>yyTracePrompt</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="yy_syntax_error">
         <parameters>
@@ -87,6 +274,15 @@
           <par name="yymajor" nr="2"/>
           <par name="yyminor" nr="3"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
     </functions>
   </cfile>

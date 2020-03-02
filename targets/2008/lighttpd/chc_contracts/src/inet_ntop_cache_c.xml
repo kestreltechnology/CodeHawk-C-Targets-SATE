@@ -9,6 +9,15 @@
           <par name="srv" nr="1"/>
           <par name="addr" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
     </functions>
   </cfile>

@@ -11,6 +11,15 @@
       </function>
       <function name="handler_ctx_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="mod_setenv_free">
         <parameters>

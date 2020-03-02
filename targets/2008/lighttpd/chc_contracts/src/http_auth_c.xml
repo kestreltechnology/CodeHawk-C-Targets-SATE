@@ -11,6 +11,15 @@
           <par name="result" nr="3"/>
           <par name="nbytes" nr="4"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="base64_decode">
         <parameters>
@@ -38,6 +47,15 @@
           <par name="password" nr="6"/>
           <par name="pw" nr="7"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="http_auth_digest_check">
         <parameters>
@@ -56,6 +74,15 @@
           <par name="fn" nr="3"/>
           <par name="out" nr="4"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="http_auth_get_password">
         <parameters>
@@ -82,6 +109,15 @@
           <par name="v" nr="2"/>
           <par name="n" nr="3"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
     </functions>
   </cfile>

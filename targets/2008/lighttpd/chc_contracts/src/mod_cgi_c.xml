@@ -54,6 +54,57 @@
       </function>
       <function name="cgi_handler_ctx_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<allocation-base/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<not-null/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="response"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<initialized/>
+		<apply>
+		  <addressed-value>
+		    <field name="response_header"/>
+		  </addressed-value>
+		  <return/>
+		</apply>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="cgi_is_handled">
         <parameters>
@@ -75,6 +126,15 @@
           <par name="p" nr="2"/>
           <par name="pid" nr="3"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="cgi_response_parse">
         <parameters>

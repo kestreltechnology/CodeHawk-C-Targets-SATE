@@ -64,6 +64,15 @@
           <par name="dst" nr="5"/>
           <par name="overwrite" nr="6"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="webdav_delete_dir">
         <parameters>
@@ -141,6 +150,15 @@
           <par name="p" nr="3"/>
           <par name="uri" nr="4"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="webdav_lockdiscovery">
         <parameters>

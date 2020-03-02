@@ -11,6 +11,23 @@
       </function>
       <function name="handler_ctx_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<not-null/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="mod_rewrite_con_reset">
         <parameters>
@@ -77,6 +94,15 @@
       </function>
       <function name="rewrite_rule_buffer_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
     </functions>
   </cfile>

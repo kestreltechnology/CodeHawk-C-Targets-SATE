@@ -11,6 +11,15 @@
           <par name="fd" nr="3"/>
           <par name="events" nr="4"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_event_del">
         <parameters>
@@ -18,30 +27,75 @@
           <par name="fde_ndx" nr="2"/>
           <par name="fd" nr="3"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_event_get_fd">
         <parameters>
           <par name="ev" nr="1"/>
           <par name="ndx" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_event_get_revent">
         <parameters>
           <par name="ev" nr="1"/>
           <par name="ndx" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_event_next_fdndx">
         <parameters>
           <par name="ev" nr="1"/>
           <par name="ndx" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_fcntl_set">
         <parameters>
           <par name="ev" nr="1"/>
           <par name="fd" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_free">
         <parameters>
@@ -53,24 +107,68 @@
           <par name="ev" nr="1"/>
           <par name="fd" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_get_handler">
         <parameters>
           <par name="ev" nr="1"/>
           <par name="fd" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_init">
         <parameters>
           <par name="maxfds" nr="1"/>
           <par name="type" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<allocation-base/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_poll">
         <parameters>
           <par name="ev" nr="1"/>
           <par name="timeout_ms" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_register">
         <parameters>
@@ -79,11 +177,29 @@
           <par name="handler" nr="3"/>
           <par name="ctx" nr="4"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_reset">
         <parameters>
           <par name="ev" nr="1"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="fdevent_unregister">
         <parameters>
@@ -98,6 +214,23 @@
       </function>
       <function name="fdnode_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<not-null/>
+		<return/>
+	      </apply>
+	    </math>
+	  </post>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
     </functions>
   </cfile>

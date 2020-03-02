@@ -23,6 +23,15 @@
           <par name="multiplier" nr="2"/>
           <par name="size" nr="3"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="mod_status_handle_server_config">
         <parameters>

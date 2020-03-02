@@ -8,6 +8,15 @@
         <parameters>
           <par name="srv" nr="1"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="log_error_cycle">
         <parameters>

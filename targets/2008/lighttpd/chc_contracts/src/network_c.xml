@@ -18,6 +18,15 @@
         <parameters>
           <par name="srv" nr="1"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="network_server_handle_fdevent">
         <parameters>

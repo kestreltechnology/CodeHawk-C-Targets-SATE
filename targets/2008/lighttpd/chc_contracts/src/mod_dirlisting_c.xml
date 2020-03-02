@@ -17,12 +17,30 @@
       </function>
       <function name="excludes_buffer_init">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="http_dirls_sort">
         <parameters>
           <par name="ent" nr="1"/>
           <par name="num" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="http_list_directory">
         <parameters>
@@ -53,6 +71,15 @@
           <par name="buf" nr="1"/>
           <par name="size" nr="2"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="mod_dirlisting_free">
         <parameters>
