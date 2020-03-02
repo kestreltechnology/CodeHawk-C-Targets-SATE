@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-28 00:00:46.787882"/>
+  <cfile name="xdata/xrddefault">
+    <data-structures/>
+    <functions>
+      <function name="xrddefault_grab_config_info">
+        <parameters>
+          <par name="main_config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xrddefault_read_state_information">
+        <parameters>
+          <par name="main_config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xrddefault_save_state_information">
+        <parameters>
+          <par name="main_config_file" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

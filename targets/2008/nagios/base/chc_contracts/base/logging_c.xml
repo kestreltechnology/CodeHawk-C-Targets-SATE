@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.275886"/>
+  <cfile name="base/logging">
+    <data-structures/>
+    <functions>
+      <function name="log_host_event">
+        <parameters>
+          <par name="hst" nr="1"/>
+        </parameters>
+      </function>
+      <function name="log_host_states">
+        <parameters>
+          <par name="type" nr="1"/>
+          <par name="timestamp" nr="2"/>
+        </parameters>
+      </function>
+      <function name="log_service_event">
+        <parameters>
+          <par name="svc" nr="1"/>
+        </parameters>
+      </function>
+      <function name="log_service_states">
+        <parameters>
+          <par name="type" nr="1"/>
+          <par name="timestamp" nr="2"/>
+        </parameters>
+      </function>
+      <function name="rotate_log_file">
+        <parameters>
+          <par name="rotation_time" nr="1"/>
+        </parameters>
+      </function>
+      <function name="write_log_file_info">
+        <parameters>
+          <par name="timestamp" nr="1"/>
+        </parameters>
+      </function>
+      <function name="write_to_all_logs">
+        <parameters>
+          <par name="buffer" nr="1"/>
+          <par name="data_type" nr="2"/>
+        </parameters>
+      </function>
+      <function name="write_to_all_logs_with_timestamp">
+        <parameters>
+          <par name="buffer" nr="1"/>
+          <par name="data_type" nr="2"/>
+          <par name="timestamp" nr="3"/>
+        </parameters>
+      </function>
+      <function name="write_to_console">
+        <parameters>
+          <par name="buffer" nr="1"/>
+        </parameters>
+      </function>
+      <function name="write_to_log">
+        <parameters>
+          <par name="buffer" nr="1"/>
+          <par name="data_type" nr="2"/>
+          <par name="timestamp" nr="3"/>
+        </parameters>
+      </function>
+      <function name="write_to_logs_and_console">
+        <parameters>
+          <par name="buffer" nr="1"/>
+          <par name="data_type" nr="2"/>
+          <par name="display" nr="3"/>
+        </parameters>
+      </function>
+      <function name="write_to_syslog">
+        <parameters>
+          <par name="buffer" nr="1"/>
+          <par name="data_type" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

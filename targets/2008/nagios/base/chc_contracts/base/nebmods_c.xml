@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.403937"/>
+  <cfile name="base/nebmods">
+    <data-structures/>
+    <functions>
+      <function name="neb_add_module">
+        <parameters>
+          <par name="filename" nr="1"/>
+          <par name="args" nr="2"/>
+          <par name="should_be_loaded" nr="3"/>
+        </parameters>
+      </function>
+      <function name="neb_deinit_modules">
+        <parameters/>
+      </function>
+      <function name="neb_deregister_callback">
+        <parameters>
+          <par name="callback_type" nr="1"/>
+          <par name="callback_func" nr="2"/>
+        </parameters>
+      </function>
+      <function name="neb_deregister_module_callbacks">
+        <parameters>
+          <par name="mod" nr="1"/>
+        </parameters>
+      </function>
+      <function name="neb_free_callback_list">
+        <parameters/>
+      </function>
+      <function name="neb_free_module_list">
+        <parameters/>
+      </function>
+      <function name="neb_init_callback_list">
+        <parameters/>
+      </function>
+      <function name="neb_init_modules">
+        <parameters/>
+      </function>
+      <function name="neb_load_all_modules">
+        <parameters/>
+      </function>
+      <function name="neb_load_module">
+        <parameters>
+          <par name="mod" nr="1"/>
+        </parameters>
+      </function>
+      <function name="neb_make_callbacks">
+        <parameters>
+          <par name="callback_type" nr="1"/>
+          <par name="data" nr="2"/>
+        </parameters>
+      </function>
+      <function name="neb_register_callback">
+        <parameters>
+          <par name="callback_type" nr="1"/>
+          <par name="mod_handle" nr="2"/>
+          <par name="priority" nr="3"/>
+          <par name="callback_func" nr="4"/>
+        </parameters>
+      </function>
+      <function name="neb_set_module_info">
+        <parameters>
+          <par name="handle" nr="1"/>
+          <par name="type" nr="2"/>
+          <par name="data" nr="3"/>
+        </parameters>
+      </function>
+      <function name="neb_unload_all_modules">
+        <parameters>
+          <par name="flags" nr="1"/>
+          <par name="reason" nr="2"/>
+        </parameters>
+      </function>
+      <function name="neb_unload_module">
+        <parameters>
+          <par name="mod" nr="1"/>
+          <par name="flags" nr="2"/>
+          <par name="reason" nr="3"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

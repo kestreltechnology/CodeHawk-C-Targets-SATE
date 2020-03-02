@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.173570"/>
+  <cfile name="base/config">
+    <data-structures/>
+    <functions>
+      <function name="pre_flight_check">
+        <parameters/>
+      </function>
+      <function name="read_all_object_data">
+        <parameters>
+          <par name="main_config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="read_main_config_file">
+        <parameters>
+          <par name="main_config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="read_resource_file">
+        <parameters>
+          <par name="resource_file" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

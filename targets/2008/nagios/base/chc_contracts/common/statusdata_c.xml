@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-28 00:00:45.580135"/>
+  <cfile name="common/statusdata">
+    <data-structures/>
+    <functions>
+      <function name="cleanup_status_data">
+        <parameters>
+          <par name="config_file" nr="1"/>
+          <par name="delete_status_data" nr="2"/>
+        </parameters>
+      </function>
+      <function name="initialize_status_data">
+        <parameters>
+          <par name="config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="update_all_status_data">
+        <parameters/>
+      </function>
+      <function name="update_host_status">
+        <parameters>
+          <par name="hst" nr="1"/>
+          <par name="aggregated_dump" nr="2"/>
+        </parameters>
+      </function>
+      <function name="update_program_status">
+        <parameters>
+          <par name="aggregated_dump" nr="1"/>
+        </parameters>
+      </function>
+      <function name="update_service_status">
+        <parameters>
+          <par name="svc" nr="1"/>
+          <par name="aggregated_dump" nr="2"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

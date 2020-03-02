@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.470246"/>
+  <cfile name="base/perfdata">
+    <data-structures/>
+    <functions>
+      <function name="cleanup_performance_data">
+        <parameters>
+          <par name="config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="initialize_performance_data">
+        <parameters>
+          <par name="config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="update_host_performance_data">
+        <parameters>
+          <par name="hst" nr="1"/>
+        </parameters>
+      </function>
+      <function name="update_service_performance_data">
+        <parameters>
+          <par name="svc" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.374105"/>
+  <cfile name="base/nagiostats">
+    <data-structures/>
+    <functions>
+      <function name="display_mrtg_values">
+        <parameters/>
+      </function>
+      <function name="display_stats">
+        <parameters/>
+      </function>
+      <function name="get_time_breakdown">
+        <parameters>
+          <par name="raw_time" nr="1"/>
+          <par name="days" nr="2"/>
+          <par name="hours" nr="3"/>
+          <par name="minutes" nr="4"/>
+          <par name="seconds" nr="5"/>
+        </parameters>
+      </function>
+      <function name="main">
+        <parameters>
+          <par name="argc" nr="1"/>
+          <par name="argv" nr="2"/>
+        </parameters>
+      </function>
+      <function name="read_config_file">
+        <parameters/>
+      </function>
+      <function name="read_status_file">
+        <parameters/>
+      </function>
+      <function name="strip">
+        <parameters>
+          <par name="buffer" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

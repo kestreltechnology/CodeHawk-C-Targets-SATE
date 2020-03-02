@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c-analysis>
+  <header info="cfile" name="cfile" time="2020-02-28 00:00:46.709000"/>
+  <cfile name="xdata/xpddefault">
+    <data-structures/>
+    <functions>
+      <function name="xpddefault_cleanup_performance_data">
+        <parameters>
+          <par name="config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_close_host_perfdata_file">
+        <parameters/>
+      </function>
+      <function name="xpddefault_close_service_perfdata_file">
+        <parameters/>
+      </function>
+      <function name="xpddefault_free_memory">
+        <parameters/>
+      </function>
+      <function name="xpddefault_grab_config_info">
+        <parameters>
+          <par name="config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_initialize_performance_data">
+        <parameters>
+          <par name="config_file" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_open_host_perfdata_file">
+        <parameters/>
+      </function>
+      <function name="xpddefault_open_service_perfdata_file">
+        <parameters/>
+      </function>
+      <function name="xpddefault_preprocess_file_templates">
+        <parameters>
+          <par name="template" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_process_host_perfdata_file">
+        <parameters/>
+      </function>
+      <function name="xpddefault_process_service_perfdata_file">
+        <parameters/>
+      </function>
+      <function name="xpddefault_run_host_performance_data_command">
+        <parameters>
+          <par name="hst" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_run_service_performance_data_command">
+        <parameters>
+          <par name="svc" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_update_host_performance_data">
+        <parameters>
+          <par name="hst" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_update_host_performance_data_file">
+        <parameters>
+          <par name="hst" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_update_service_performance_data">
+        <parameters>
+          <par name="svc" nr="1"/>
+        </parameters>
+      </function>
+      <function name="xpddefault_update_service_performance_data_file">
+        <parameters>
+          <par name="svc" nr="1"/>
+        </parameters>
+      </function>
+    </functions>
+  </cfile>
+</c-analysis>

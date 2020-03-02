@@ -1,0 +1,82 @@
+File line and function counts
+
+file                         LOC        CLOC   functions
+--------------------------------------------------------
+base/broker                  939         849          25
+base/checks                 2672        1006          13
+base/commands               4526        2324          78
+base/config                 2834        1636           4
+base/events                 1740         809          13
+base/flapping                661         276          12
+base/logging                 480         210          12
+base/nagios                  796         511           1
+base/nagiostats             1106         948           7
+base/nebmods                 597         275          15
+base/notifications          1789         662          18
+base/perfdata                115          26           4
+base/sehandlers              732         323           9
+base/sretention              133          32           2
+base/utils                  5482        2985          69
+common/comments              671         399          25
+common/downtime             1011         522          23
+common/objects              6167        3444          81
+common/statusdata            177          46           6
+xdata/xcddefault             644         324          14
+xdata/xdddefault             663         330          13
+xdata/xodtemplate          11384        6338         108
+xdata/xpddefault             830         445          17
+xdata/xrddefault             973         686           3
+xdata/xsddefault             530         312           5
+--------------------------------------------------------
+total                      47652       25718         577
+
+Distribution of lvalue hosts
+file                         mem         var         tmp
+--------------------------------------------------------
+base/broker                   51         368           0
+base/checks                   43         268          22
+base/commands                 92         562         158
+base/config                   54         253         213
+base/events                   62         244          11
+base/flapping                 17          96           0
+base/logging                  23         110           2
+base/nagios                   10          95          15
+base/nagiostats               21         205         126
+base/nebmods                  30         107           3
+base/notifications            58         255          19
+base/perfdata                  2          11           0
+base/sehandlers               24         129           0
+base/sretention                1          13           0
+base/utils                   221         852         270
+common/comments               28         200           6
+common/downtime               33         228           4
+common/objects               296         955         162
+common/statusdata              1          21           0
+xdata/xcddefault              13         122          27
+xdata/xdddefault              13         125          30
+xdata/xodtemplate            366        1243         751
+xdata/xpddefault              27         155          21
+xdata/xrddefault              23         118         183
+xdata/xsddefault               8          88          15
+--------------------------------------------------------
+total                       1517        6823        2038
+
+================================================================================
+Dictionary
+================================================================================
+attrparam-table             5
+attribute-table            11
+attributes-table           12
+constant-table            122
+exp-table                 242
+funarg-table              107
+funargs-table             266
+offset-table               40
+typ-table                 713
+string-table               42
+================================================================================
+fieldinfo-table           570
+compinfo-table             92
+initinfo-table            154
+varinfo-table            1160
+offset-init-table         111
