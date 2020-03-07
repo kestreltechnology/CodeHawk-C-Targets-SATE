@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.275886"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:37.212243"/>
   <cfile name="base/logging">
     <data-structures/>
+    <global-variables>
+      <gvar name="log_archive_path"/>
+      <gvar name="log_file"/>
+    </global-variables>
     <functions>
       <function name="log_host_event">
         <parameters>
@@ -30,17 +34,61 @@
         <parameters>
           <par name="rotation_time" nr="1"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>log_archive_path</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>log_archive_path</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>log_file</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="write_log_file_info">
         <parameters>
           <par name="timestamp" nr="1"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="write_to_all_logs">
         <parameters>
           <par name="buffer" nr="1"/>
           <par name="data_type" nr="2"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="write_to_all_logs_with_timestamp">
         <parameters>
@@ -48,6 +96,15 @@
           <par name="data_type" nr="2"/>
           <par name="timestamp" nr="3"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="write_to_console">
         <parameters>
@@ -60,6 +117,24 @@
           <par name="data_type" nr="2"/>
           <par name="timestamp" nr="3"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>log_file</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>log_file</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="write_to_logs_and_console">
         <parameters>
@@ -67,12 +142,30 @@
           <par name="data_type" nr="2"/>
           <par name="display" nr="3"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="write_to_syslog">
         <parameters>
           <par name="buffer" nr="1"/>
           <par name="data_type" nr="2"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
     </functions>
   </cfile>

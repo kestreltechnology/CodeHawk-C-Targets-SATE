@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:46.812669"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:05:01.221732"/>
   <cfile name="xdata/xsddefault">
     <data-structures/>
     <functions>
@@ -14,6 +14,15 @@
         <parameters>
           <par name="input_buffer" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="xsddefault_grab_config_info">
         <parameters>

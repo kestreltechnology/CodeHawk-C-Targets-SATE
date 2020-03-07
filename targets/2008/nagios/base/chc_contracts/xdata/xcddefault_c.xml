@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:45.624073"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:49.880916"/>
   <cfile name="xdata/xcddefault">
     <data-structures/>
     <functions>
@@ -40,6 +40,15 @@
       </function>
       <function name="xcddefault_create_comment_file">
         <parameters/>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="xcddefault_delete_all_host_comments">
         <parameters>
@@ -66,6 +75,15 @@
         <parameters>
           <par name="input_buffer" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="xcddefault_grab_config_info">
         <parameters>
@@ -84,6 +102,15 @@
       </function>
       <function name="xcddefault_save_comment_data">
         <parameters/>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="xcddefault_validate_comment_data">
         <parameters/>

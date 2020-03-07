@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.255836"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:37.013233"/>
   <cfile name="base/flapping">
     <data-structures/>
+    <global-variables>
+      <gvar name="interval_length"/>
+    </global-variables>
     <functions>
       <function name="check_for_host_flapping">
         <parameters>
           <par name="hst" nr="1"/>
           <par name="update_history" nr="2"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<geq/>
+		<ci>interval_length</ci>
+		<cn>0</cn>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="check_for_service_flapping">
         <parameters>

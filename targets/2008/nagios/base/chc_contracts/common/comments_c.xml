@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.953325"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:44.733842"/>
   <cfile name="common/comments">
     <data-structures/>
+    <global-variables>
+      <gvar name="comment_hashlist"/>
+      <gvar name="comment_list"/>
+    </global-variables>
     <functions>
       <function name="add_comment">
         <parameters>
@@ -24,6 +28,15 @@
         <parameters>
           <par name="new_comment" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="add_host_comment">
         <parameters>
@@ -108,6 +121,15 @@
         <parameters>
           <par name="config_file" nr="1"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="delete_all_comments">
         <parameters>
@@ -132,6 +154,24 @@
           <par name="type" nr="1"/>
           <par name="comment_id" nr="2"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>comment_hashlist</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>comment_list</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="delete_host_comment">
         <parameters>
@@ -153,25 +193,89 @@
         <parameters>
           <par name="comment_id" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="find_service_comment">
         <parameters>
           <par name="comment_id" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="free_comment_data">
         <parameters/>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<allocation-base/>
+		<ci>comment_hashlist</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>comment_hashlist</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="get_first_comment_by_host">
         <parameters>
           <par name="host_name" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="get_next_comment_by_host">
         <parameters>
           <par name="host_name" nr="1"/>
           <par name="start" nr="2"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>comment_hashlist</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="initialize_comment_data">
         <parameters>

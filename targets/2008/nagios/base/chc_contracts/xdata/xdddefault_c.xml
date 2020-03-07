@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:45.671268"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:50.192072"/>
   <cfile name="xdata/xdddefault">
     <data-structures/>
     <functions>
@@ -40,6 +40,15 @@
       </function>
       <function name="xdddefault_create_downtime_file">
         <parameters/>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="xdddefault_delete_downtime">
         <parameters>
@@ -61,6 +70,15 @@
         <parameters>
           <par name="input_buffer" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="xdddefault_grab_config_info">
         <parameters>
@@ -79,6 +97,15 @@
       </function>
       <function name="xdddefault_save_downtime_data">
         <parameters/>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="xdddefault_validate_downtime_data">
         <parameters/>

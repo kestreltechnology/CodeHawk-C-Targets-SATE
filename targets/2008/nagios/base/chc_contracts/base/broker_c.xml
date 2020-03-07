@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:43.622063"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:29.484825"/>
   <cfile name="base/broker">
     <data-structures/>
+    <global-variables>
+      <gvar name="global_host_event_handler"/>
+      <gvar name="global_service_event_handler"/>
+    </global-variables>
     <functions>
       <function name="broker_acknowledgement_data">
         <parameters>
@@ -18,6 +22,15 @@
           <par name="persistent_comment" nr="10"/>
           <par name="timestamp" nr="11"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_adaptive_host_data">
         <parameters>
@@ -30,6 +43,15 @@
           <par name="modattrs" nr="7"/>
           <par name="timestamp" nr="8"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_adaptive_program_data">
         <parameters>
@@ -57,6 +79,15 @@
           <par name="modattrs" nr="7"/>
           <par name="timestamp" nr="8"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_aggregated_status_data">
         <parameters>
@@ -85,6 +116,15 @@
           <par name="comment_id" nr="15"/>
           <par name="timestamp" nr="16"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="broker_contact_notification_data">
         <parameters>
@@ -102,6 +142,15 @@
           <par name="escalated" nr="12"/>
           <par name="timestamp" nr="13"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_contact_notification_method_data">
         <parameters>
@@ -120,6 +169,16 @@
           <par name="escalated" nr="13"/>
           <par name="timestamp" nr="14"/>
         </parameters>
+	<postconditions>
+	  <!--  preserves all external memory -->
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="broker_downtime_data">
         <parameters>
@@ -140,6 +199,15 @@
           <par name="downtime_id" nr="15"/>
           <par name="timestamp" nr="16"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_event_handler">
         <parameters>
@@ -161,6 +229,16 @@
           <par name="output" nr="16"/>
           <par name="timestamp" nr="17"/>
         </parameters>
+	<postconditions>
+	  <!--  preserves all external memory -->
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="broker_external_command">
         <parameters>
@@ -186,6 +264,15 @@
           <par name="low_threshold" nr="8"/>
           <par name="timestamp" nr="9"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_host_check">
         <parameters>
@@ -209,6 +296,16 @@
           <par name="perfdata" nr="18"/>
           <par name="timestamp" nr="19"/>
         </parameters>
+	<postconditions>
+	  <!--  preserves all external memory -->
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="broker_host_status">
         <parameters>
@@ -246,6 +343,15 @@
           <par name="contacts_notified" nr="12"/>
           <par name="timestamp" nr="13"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_program_state">
         <parameters>
@@ -254,6 +360,15 @@
           <par name="attr" nr="3"/>
           <par name="timestamp" nr="4"/>
         </parameters>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="broker_program_status">
         <parameters>
@@ -262,6 +377,24 @@
           <par name="attr" nr="3"/>
           <par name="timestamp" nr="4"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>global_host_event_handler</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>global_service_event_handler</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="broker_retention_data">
         <parameters>
@@ -270,6 +403,15 @@
           <par name="attr" nr="3"/>
           <par name="timestamp" nr="4"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_service_check">
         <parameters>
@@ -289,6 +431,16 @@
           <par name="cmdline" nr="14"/>
           <par name="timestamp" nr="15"/>
         </parameters>
+	<postconditions>
+	  <!--  preserves all external memory -->
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="broker_service_status">
         <parameters>
@@ -312,6 +464,15 @@
           <par name="max_attempts" nr="9"/>
           <par name="timestamp" nr="10"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_system_command">
         <parameters>
@@ -328,6 +489,15 @@
           <par name="output" nr="11"/>
           <par name="timestamp" nr="12"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="broker_timed_event">
         <parameters>
@@ -337,11 +507,29 @@
           <par name="event" nr="4"/>
           <par name="timestamp" nr="5"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="get_broker_timestamp">
         <parameters>
           <par name="timestamp" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
     </functions>
   </cfile>

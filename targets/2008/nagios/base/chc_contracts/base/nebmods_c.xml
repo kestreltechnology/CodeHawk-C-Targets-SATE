@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.403937"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:38.401474"/>
   <cfile name="base/nebmods">
     <data-structures/>
+    <global-variables>
+      <gvar name="neb_callback_list"/>
+      <gvar name="neb_module_list"/>
+    </global-variables>
     <functions>
       <function name="neb_add_module">
         <parameters>
@@ -10,6 +14,16 @@
           <par name="args" nr="2"/>
           <par name="should_be_loaded" nr="3"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>neb_module_list</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="neb_deinit_modules">
         <parameters/>
@@ -19,23 +33,79 @@
           <par name="callback_type" nr="1"/>
           <par name="callback_func" nr="2"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>neb_callback_list</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="neb_deregister_module_callbacks">
         <parameters>
           <par name="mod" nr="1"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>neb_callback_list</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="neb_free_callback_list">
         <parameters/>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<allocation-base/>
+		<ci>neb_callback_list</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>neb_callback_list</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="neb_free_module_list">
         <parameters/>
       </function>
       <function name="neb_init_callback_list">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="neb_init_modules">
         <parameters/>
+	<postconditions>
+	  <post>
+	    <math>
+	      <apply>
+		<preserves-all-memory/>
+	      </apply>
+	    </math>
+	  </post>
+	</postconditions>
       </function>
       <function name="neb_load_all_modules">
         <parameters/>
@@ -50,6 +120,25 @@
           <par name="callback_type" nr="1"/>
           <par name="data" nr="2"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>neb_callback_list</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="neb_register_callback">
         <parameters>
@@ -58,6 +147,16 @@
           <par name="priority" nr="3"/>
           <par name="callback_func" nr="4"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>neb_callback_list</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="neb_set_module_info">
         <parameters>

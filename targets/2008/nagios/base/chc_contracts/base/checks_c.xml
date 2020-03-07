@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:43.703322"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:30.907179"/>
   <cfile name="base/checks">
     <data-structures/>
+    <global-variables>
+      <gvar name="currently_running_service_checks"/>
+      <gvar name="service_check_timeout"/>
+    </global-variables>
     <functions>
       <function name="check_for_orphaned_services">
         <parameters/>
@@ -19,6 +23,15 @@
           <par name="hst" nr="1"/>
           <par name="dependency_type" nr="2"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="check_host_result_freshness">
         <parameters/>
@@ -28,6 +41,15 @@
           <par name="svc" nr="1"/>
           <par name="dependency_type" nr="2"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="check_service_result_freshness">
         <parameters/>
@@ -50,6 +72,30 @@
         <parameters>
           <par name="svc" nr="1"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<geq/>
+		<ci>service_check_timeout</ci>
+		<cn>0</cn>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<leq/>
+		<apply>
+		  <plus/>
+		  <ci>currently_running_service_checks</ci>
+		  <cn>1</cn>
+		</apply>
+		<ci>MAXINT32</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="schedule_host_check">
         <parameters>

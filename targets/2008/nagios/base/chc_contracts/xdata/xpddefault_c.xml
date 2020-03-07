@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:46.709000"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:59.939878"/>
   <cfile name="xdata/xpddefault">
     <data-structures/>
+    <global-variables>
+      <gvar name="xpddefault_host_perfdata_file_processing_command"/>
+      <gvar name="xpddefault_service_perfdata_file_processing_command"/>
+      <gvar name="xpddefault_perfdata_timeout"/>
+    </global-variables>
     <functions>
       <function name="xpddefault_cleanup_performance_data">
         <parameters>
@@ -41,9 +46,47 @@
       </function>
       <function name="xpddefault_process_host_perfdata_file">
         <parameters/>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<geq/>
+		<ci>xpddefault_perfdata_timeout</ci>
+		<cn>0</cn>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>xpddefault_host_perfdata_file_processing_command</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="xpddefault_process_service_perfdata_file">
         <parameters/>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<geq/>
+		<ci>xpddefault_perfdata_timeout</ci>
+		<cn>0</cn>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>xpddefault_service_perfdata_file_processing_command</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="xpddefault_run_host_performance_data_command">
         <parameters>

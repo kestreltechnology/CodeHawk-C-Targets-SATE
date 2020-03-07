@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c-analysis>
-  <header info="cfile" name="cfile" time="2020-02-28 00:00:44.026125"/>
+  <header info="cfile" name="cfile" time="2020-03-02 16:04:33.490851"/>
   <cfile name="base/commands">
     <data-structures/>
+    <global-variables>
+      <gvar name="config_file"/>
+      <gvar name="global_host_event_handler"/>
+      <gvar name="global_service_event_handler"/>
+      <gvar name="last_command_status_update"/>
+      <gvar name="passive_check_result_list_tail"/>
+    </global-variables>
     <functions>
       <function name="acknowledge_host_problem">
         <parameters>
@@ -26,6 +33,29 @@
       </function>
       <function name="check_for_external_commands">
         <parameters/>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>config_file</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<leq/>
+		<apply>
+		  <plus/>
+		  <ci>last_command_status_update</ci>
+		  <cn>10</cn>
+		</apply>
+		<ci>MAXINT32</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="cmd_acknowledge_problem">
         <parameters>
@@ -51,6 +81,40 @@
           <par name="cmd" nr="1"/>
           <par name="args" nr="2"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<allocation-base/>
+		<ci>global_host_event_handler</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<allocation-base/>
+		<ci>global_service_event_handler</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>global_host_event_handler</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>global_service_event_handler</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="cmd_change_max_attempts">
         <parameters>
@@ -142,6 +206,15 @@
           <par name="affect_hosts" nr="4"/>
           <par name="affect_services" nr="5"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="disable_host_checks">
         <parameters>
@@ -160,6 +233,15 @@
         <parameters>
           <par name="hst" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="disable_passive_host_checks">
         <parameters>
@@ -170,6 +252,15 @@
         <parameters>
           <par name="svc" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="disable_performance_data">
         <parameters/>
@@ -191,6 +282,15 @@
         <parameters>
           <par name="svc" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="enable_all_failure_prediction">
         <parameters/>
@@ -206,6 +306,15 @@
           <par name="affect_hosts" nr="4"/>
           <par name="affect_services" nr="5"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="enable_host_checks">
         <parameters>
@@ -224,6 +333,15 @@
         <parameters>
           <par name="hst" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="enable_passive_host_checks">
         <parameters>
@@ -234,6 +352,15 @@
         <parameters>
           <par name="svc" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="enable_performance_data">
         <parameters/>
@@ -255,6 +382,15 @@
         <parameters>
           <par name="svc" nr="1"/>
         </parameters>
+        <postconditions>
+          <post>
+            <math>
+              <apply>
+                <preserves-all-memory/>
+              </apply>
+            </math>
+          </post>
+        </postconditions>
       </function>
       <function name="process_external_command">
         <parameters>
@@ -262,6 +398,16 @@
           <par name="entry_time" nr="2"/>
           <par name="args" nr="3"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>config_file</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="process_host_command">
         <parameters>
@@ -293,6 +439,24 @@
           <par name="return_code" nr="4"/>
           <par name="output" nr="5"/>
         </parameters>
+	<preconditions>
+	  <pre>
+	    <math>
+	      <apply>
+		<not-null/>
+		<ci>passive_check_result_list_tail</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	  <pre>
+	    <math>
+	      <apply>
+		<valid-mem/>
+		<ci>passive_check_result_list_tail</ci>
+	      </apply>
+	    </math>
+	  </pre>
+	</preconditions>
       </function>
       <function name="process_passive_service_checks">
         <parameters/>
