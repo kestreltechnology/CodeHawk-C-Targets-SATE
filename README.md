@@ -80,9 +80,10 @@ More scripts are available in the
 - *size*: 25 .c files, 602 functions, 48,452 LOC
 - *semantic size*: 20,163 statements, 8091 calls, 7999 assignments
   ([more detailed statistics](targets/2008/nagios/base/latestresults/projectstats.txt))
-- *primary proof obligations (ppo's)*: 204,533
-- *current analysis status*: 153,573 ppo's (75.1%) proven safe or
-  delegated, 50,960 (24.9%) not yet proven
+- *primary proof obligations (ppo's)*: 204,546
+- *current analysis status*: 158,507 ppo's (77.5%) proven safe or
+  delegated, 46,039 (22.5%) not yet proven
   ([more detailed results](targets/2008/nagios/base/latestresults/summaryresults.txt))
   broken down by source file and proof obligation kind
-- *analysis time*: approximately 42 mins (4 cores)
+- *analysis time*: approximately 1 hr 45 mins (single core), or 42 mins (4 cores)
+
