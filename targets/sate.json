@@ -5,6 +5,10 @@
 	},
 	"nagios": {
 	    "path": "2008/nagios/base"
+	},
+	"naim": {
+	    "path": "2008/naim",
+	    "version": "naim-0.11.8.3.1"
 	}
     }
 }
