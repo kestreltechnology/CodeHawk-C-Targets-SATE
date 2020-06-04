@@ -9,6 +9,18 @@
 	"naim": {
 	    "path": "2008/naim",
 	    "version": "naim-0.11.8.3.1"
+	},
+	"irssi": {
+	    "path": "2009/irssi-0.8.14",
+	    "version": "irssi-0.8.14"
+	},
+	"pvm": {
+	    "path": "2009/pvm3.4.6",
+	    "version": "pvm3.4.6"
+	},
+	"dovecot": {
+	    "path": "2010/dovecot-2.0.beta6",
+	    "version": "dovecot-2.0.beta6"
 	}
     }
 }
