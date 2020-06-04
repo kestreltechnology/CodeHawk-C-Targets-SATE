@@ -1,0 +1,93 @@
+{
+    "fcntl2.h": {
+	"loc": "/usr/include/x86_64-linux-gnu/bits/fcntl2.h",
+	"functions": [
+	    "open64",
+	    "openat64",
+	    "openat",
+	    "open"
+	]
+    },
+    "socket2.h": {
+	"loc": "/usr/include/x86_64-linux-gnu/bits/socket2.h",
+	"functions": [
+	    "recv",
+	    "recvfrom"
+	]
+    },
+    "stdio2.h": {
+	"loc": "/usr/include/x86_64-linux-gnu/bits/stdio2.h",
+	"functions": [
+	    "__asprintf",
+	    "asprintf",
+	    "dprintf",
+	    "fgets",
+	    "fgets_unlocked",
+	    "fprintf",
+	    "fread",
+	    "fread_unlocked",
+	    "obstack_printf",
+	    "obstack_vprintf",
+	    "printf",
+	    "snprintf",
+	    "sprintf",
+	    "vasprintf",
+	    "vdprintf",
+	    "vfprintf",
+	    "vprintf",
+	    "vsnprintf",
+	    "vsprintf"
+	]
+    },
+    "stdlib.h": {
+	"loc": "/usr/include/x86_64-linux-gnu/bits/stdlib.h",
+	"functions": [
+	    "mbstowcs",
+	    "ptsname_r",
+	    "realpath",
+	    "wcstombs",
+	    "wctomb"
+	]
+    },
+    "string.h": {
+	"loc": "/usr/include/string.h",
+	"functions": [
+	    "__mempcpy_inline"
+	]
+    },
+    "string3.h": {
+	"loc": "/usr/include/x86_64-linux-gnu/bits/string3.h",
+	"functions": [
+	    "bcopy",
+	    "bzero",
+	    "memcpy",
+	    "memmove",
+	    "mempcpy",
+	    "memset",
+	    "stpcpy",
+	    "stpncpy",
+	    "strcat",
+	    "strcpy",
+	    "strncat",
+	    "strncpy"
+	]
+    },
+    "unistd.h": {
+	"loc": "/usr/include/x86_64-linux-gnu/bits/unistd.h",
+	"functions": [
+	    "confstr",
+	    "getcwd",
+	    "getdomainname",
+	    "getgroups",
+	    "gethostname",
+	    "getlogin_r",
+	    "getwd",
+	    "pread64",
+	    "pread",
+	    "readlinkat",
+	    "readlink",
+	    "read",
+	    "ttyname_r"
+	]
+    }
+}
